@@ -1,15 +1,15 @@
-package CustomerManegement;
+package cms;
 
 public class Customer {
     private String name="";
     private String dateOFBirth;
     private String address;
-    private int img;
+    private String img;
 
     public Customer() {
     }
 
-    public Customer(String name, String dateOFBirth, String address, int img) {
+    public Customer(String name, String dateOFBirth, String address, String img) {
         this.name = name;
         this.dateOFBirth = dateOFBirth;
         this.address = address;
@@ -40,11 +40,11 @@ public class Customer {
         this.address = address;
     }
 
-    public int getImg() {
+    public String getImg() {
         return img;
     }
 
-    public void setImg(int img) {
+    public void setImg(String img) {
         this.img = img;
     }
 }
