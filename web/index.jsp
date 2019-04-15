@@ -1,4 +1,4 @@
-<%@ page import="cms.ListCustomer" %><%--
+<%@ page import="service.ListCustomer" %><%--
   Created by IntelliJ IDEA.
   User: Nam_Phuong
   Date: 2019-04-12
@@ -11,10 +11,7 @@
     <title>$Title$</title>
   </head>
   <body>
-  <%!
-
-  %>
-      <form method="post" action="/control_1">
+      <form method="post" action="/customer">
           <h1> hello</h1>
           <input type="submit">
 
