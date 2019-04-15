@@ -12,8 +12,8 @@
   </head>
   <body>
       <form method="post" action="/customer">
-          <h1> hello</h1>
-          <input type="submit">
+          <h1> Do you want to warch table customer</h1>
+          <input type="submit" value="Show">
 
       </form>
   </body>
