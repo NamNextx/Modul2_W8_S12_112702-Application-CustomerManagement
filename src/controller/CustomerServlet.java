@@ -1,7 +1,7 @@
 package controller;
 
 import model.Customer;
-import service.ListCustomer;
+import service.ListCustomerService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,26 +12,25 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "CustomerServlet",urlPatterns = "/customer")
+@WebServlet(name = "CustomerServlet", urlPatterns = "/customer")
 public class CustomerServlet extends HttpServlet {
-    ListCustomer listCustomer=new ListCustomer();
+    ListCustomerService listCustomerService = new ListCustomerService();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       showCustomer(request,response);
-
+        showCustomer(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        showCustomer(request,response);
+        showCustomer(request, response);
     }
 
     private void showCustomer(HttpServletRequest request, HttpServletResponse response) {
-        listCustomer.createCustomer();
-        List<Customer> customerList=listCustomer.findAll();
-        request.setAttribute("customers",customerList);
-        RequestDispatcher requestDispatcher=request.getRequestDispatcher("ShowCustomers.jsp");
+        listCustomerService.createCustomer();
+        List<Customer> customerList = listCustomerService.findAll();
+        request.setAttribute("customers", customerList);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("ShowCustomers.jsp");
         try {
-            requestDispatcher.forward(request,response);
+            requestDispatcher.forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {

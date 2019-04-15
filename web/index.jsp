@@ -1,4 +1,4 @@
-<%@ page import="service.ListCustomer" %><%--
+<%@ page import="service.ListCustomerService" %><%--
   Created by IntelliJ IDEA.
   User: Nam_Phuong
   Date: 2019-04-12
